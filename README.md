@@ -43,6 +43,40 @@ Token.
   git push origin main
   ```
 
+  If you see the following:
+
+  ```
+  ! [rejected]        main -> main (fetch first)
+  error: failed to push some refs to 'https://github.com/cs334s26/PracticeRepo.git'
+  hint: Updates were rejected because the remote contains work that you do not
+  hint: have locally. This is usually caused by another repository pushing to
+  hint: the same ref. If you want to integrate the remote changes, use
+  hint: 'git pull' before pushing again.
+  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  ```
+
+  it means that someone else pushed to the repo while you were working.  In
+  this case you need to pull their work down first:
+
+  ```
+  git pull origin main
+  ```
+
+  This will open `nano` with the message:
+
+  ```
+  Merge branch 'main' of https://github.com/cs334s26/PracticeRepo
+  ```
+
+  You can leave this message as-is and exit `nano`.  This will merge the 
+  work on Github with your copy of the repo on your laptop.
+
+  Now you can push:
+
+  ```
+  git push origin main
+  ```
+
 * Verify that your file is in the [repo](https://github.com/cs334s26/PracticeRepo).
 
 
